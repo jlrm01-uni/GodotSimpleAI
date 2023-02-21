@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ingsat_100_pixels.tres" type="DynamicFont" id=1]
+[ext_resource path="res://DeathScreen.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade_in"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.717647, 0.14902, 0.14902, 0 ), Color( 0.717647, 0.14902, 0.14902, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "reset_level"
+} ]
+}
+
+[node name="DeathScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.717647, 0.14902, 0.14902, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "You Died"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "fade_in"
+anims/fade_in = SubResource( 1 )

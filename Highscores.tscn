@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/tilesetOpenGameBackground.png" type="Texture" id=1]
+[ext_resource path="res://Highscores.gd" type="Script" id=2]
+[ext_resource path="res://Ingsat TST_CRD Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 10.0
+bg_color = Color( 0.164706, 0.745098, 0.545098, 0.243137 )
+
+[node name="Highscores" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+path_to_scene = "res://main.tscn"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="ItemList" type="ItemList" parent="MarginContainer"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 974.0
+margin_bottom = 550.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
