@@ -74,7 +74,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://PlayerState.gd"
 }, {
-"base": "Area2D",
+"base": "KinematicBody2D",
 "class": "Spikes",
 "language": "GDScript",
 "path": "res://Spikey.gd"

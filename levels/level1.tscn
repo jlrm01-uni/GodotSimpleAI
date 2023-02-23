@@ -329,11 +329,13 @@ position = Vector2( -180, 10 )
 scale = Vector2( 1, 4.44 )
 timeline = "warning"
 
-[node name="Spikey" parent="DialogicTrigger" instance=ExtResource( 10 )]
-position = Vector2( 62, -9.90991 )
+[node name="Spikey2" parent="." instance=ExtResource( 10 )]
+position = Vector2( -118, -34 )
+scale = Vector2( 1, 4.44 )
 
-[node name="Spikey2" parent="DialogicTrigger" instance=ExtResource( 10 )]
-position = Vector2( 339, 8.78378 )
+[node name="Spikey3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 159, 49 )
+scale = Vector2( 1, 4.44 )
 
 [editable path="MovingPlatform"]
 [editable path="MovingPlatform2"]

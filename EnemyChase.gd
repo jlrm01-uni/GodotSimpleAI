@@ -5,7 +5,7 @@ var player = null
 func _ready() -> void:
 	pass
 	
-func physics_process(_delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	spikes.velocity = Vector2.ZERO
 	
 	if player:
