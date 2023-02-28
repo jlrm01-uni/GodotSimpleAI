@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/character_0008.png" type="Texture" id=1]
 [ext_resource path="res://Spikey.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://EnemyIdle.gd" type="Script" id=4]
 [ext_resource path="res://EnemyChase.gd" type="Script" id=5]
 [ext_resource path="res://EnemyReturn.gd" type="Script" id=6]
+[ext_resource path="res://SpikeyPatrol.gd" type="Script" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -45,6 +46,9 @@ script = ExtResource( 5 )
 
 [node name="Return" type="Node" parent="StateMachine"]
 script = ExtResource( 6 )
+
+[node name="Patrol" type="Node" parent="StateMachine"]
+script = ExtResource( 7 )
 
 [node name="PatrolTimer" type="Timer" parent="."]
 

@@ -288,6 +288,8 @@ position = Vector2( -248, 44 )
 
 [node name="Spikey" parent="." instance=ExtResource( 10 )]
 position = Vector2( -212, 46 )
+start_position = NodePath("../start")
+end_position = NodePath("../end")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 visible = false
@@ -330,12 +332,18 @@ scale = Vector2( 1, 4.44 )
 timeline = "warning"
 
 [node name="Spikey2" parent="." instance=ExtResource( 10 )]
-position = Vector2( -118, -34 )
+position = Vector2( 40, -102 )
 scale = Vector2( 1, 4.44 )
 
 [node name="Spikey3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 159, 49 )
+position = Vector2( 251, -39 )
 scale = Vector2( 1, 4.44 )
+
+[node name="start" type="Position2D" parent="."]
+position = Vector2( -215, 19 )
+
+[node name="end" type="Position2D" parent="."]
+position = Vector2( -114, 17 )
 
 [editable path="MovingPlatform"]
 [editable path="MovingPlatform2"]
