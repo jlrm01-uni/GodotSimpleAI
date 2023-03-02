@@ -116,7 +116,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="PlatformerGame - AI Version"
+config/name="PlatformerGame - AI Version - Fixed"
 run/main_scene="res://levels/level1.tscn"
 config/icon="res://icon.png"
 

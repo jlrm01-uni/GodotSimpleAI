@@ -4,6 +4,7 @@ func physics_update(_delta: float):
 	pass
 	
 func enter(_msg:={}) -> void:
+	spikes.original_position = spikes.position
 	spikes.patrol_timer.start()
 
 func _on_PatrolTimer_timeout() -> void:
